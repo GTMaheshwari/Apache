@@ -1,0 +1,17 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+  - name: Install Apache on My Centos Machine
+    yum: 
+      name: httpd
+      state: latest
+  - name: Start the Apache Server on Centos Machine
+    service:
+      name: httpd
+      state: started
+  - name: Copy Index.html file
+    template:
+      src: /etc/ansible/index.html
+      dest: /var/www/html/index.html
+
