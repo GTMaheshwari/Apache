@@ -11,7 +11,7 @@
       name: httpd
       state: started
   - name: Copy Index.html file
-    template:
+    copy:
       src: /etc/ansible/index.html
       dest: /var/www/html/index.html
 
