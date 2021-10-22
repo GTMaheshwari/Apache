@@ -9,9 +9,5 @@
   - name: Start the Apache Server on Centos Machine
     service:
       name: httpd
-      state: started
-  - name: Copy Index.html file
-    copy:
-      src: /etc/ansible/index.html
-      dest: /var/www/html/index.html
+      state: stopped
 
